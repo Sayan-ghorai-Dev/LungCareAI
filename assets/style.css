@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Streamlit Header & Footer Clean Up (Keeps Sidebar Toggle Visible) */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+.stApp {
+    background: radial-gradient(circle at 80% 20%, #e0f2fe 0%, #f0f7ff 35%, #f8fafc 100%);
+}
+
+/* =========================================================
+   ADMIN PANEL SIDEBAR & BOLD BUTTON NAVIGATION STYLING
+   ========================================================= */
+
+/* Sidebar Background & Border */
+[data-testid="stSidebar"] {
+    background: #ffffff !important;
+    border-right: 1px solid #E2E8F0 !important;
+    box-shadow: 4px 0 24px rgba(15, 23, 42, 0.04) !important;
+}
+
+/* Sidebar Top Brand Header */
+[data-testid="stSidebarNav"]::before {
+    content: "🫁 LUNGCARE ADMIN";
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0284c7;
+    letter-spacing: 0.8px;
+    padding: 20px 20px 14px 22px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+/* Navigation List Container */
+[data-testid="stSidebarNavItems"] {
+    padding: 0 14px !important;
+}
+
+/* Individual Page Link -> Admin Menu Button Style */
+[data-testid="stSidebarNavLink"] {
+    background-color: #F8FAFC !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    margin-bottom: 10px !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02) !important;
+}
+
+/* Link Text -> Bold & Clean */
+[data-testid="stSidebarNavLink"] span {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #1E293B !important;
+    text-transform: capitalize !important;
+    letter-spacing: 0.2px !important;
+}
+
+/* Hover Effect on Menu Buttons */
+[data-testid="stSidebarNavLink"]:hover {
+    background-color: #E0F2FE !important;
+    border-color: #38BDF8 !important;
+    transform: translateX(4px) !important;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.12) !important;
+}
+
+[data-testid="stSidebarNavLink"]:hover span {
+    color: #0284c7 !important;
+}
+
+/* Active Selected Page Button */
+[data-testid="stSidebarNavLink"][aria-current="page"] {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+    border: none !important;
+    box-shadow: 0 6px 16px rgba(2, 132, 199, 0.3) !important;
+}
+
+[data-testid="stSidebarNavLink"][aria-current="page"] span {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+/* =========================================================
+   MAIN PAGE UI STYLING
+   ========================================================= */
+
+/* Navigation Bar */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 36px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid #E2E8F0;
+    border-radius: 40px;
+    margin-bottom: 45px;
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.05);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #0284c7;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+
+/* Navbar Interactive Clean Buttons Styling */
+.nav-buttons-container {
+    margin-top: -76px;
+    padding-right: 30px;
+}
+
+.nav-buttons-container div.stButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-buttons-container div.stButton > button {
+    background: transparent !important;
+    border: none !important;
+    color: #475569 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    min-height: auto !important;
+}
+
+.nav-buttons-container div.stButton > button:hover {
+    background: transparent !important;
+    color: #0284c7 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Hero Section */
+.hero-wrapper {
+    padding: 20px 10px 40px 10px;
+}
+
+.hero-title {
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 18px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 580px;
+    margin-bottom: 30px;
+}
+
+/* CTA Action Button */
+div.stButton > button:first-child {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px 34px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.35);
+    transition: all 0.3s ease;
+}
+
+div.stButton > button:first-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(2, 132, 199, 0.45);
+    color: #ffffff;
+}
+
+/* Metric Cards */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.metric-card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    padding: 28px 18px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+    transition: transform 0.25s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+}
+
+.metric-icon-circle {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px auto;
+    border-radius: 50%;
+    background: #f0f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.metric-val {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.metric-lbl {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.metrics-footnote {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 14px;
+    margin-bottom: 55px;
+}
+
+/* Feature/Workflow Section */
+.section-headline {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.section-subheadline {
+    text-align: center;
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 36px;
+}
+
+.step-card {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.03);
+}
+
+.step-icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.step-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+}
+/* Inline Navbar Side-by-Side Clean Styling */
+.nav-inline-wrapper {
+    margin-top: -72px;
+    padding-right: 25px;
+}
+
+.nav-inline-wrapper div.stButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-inline-wrapper div.stButton > button {
+    background: transparent !important;
+    border: none !important;
+    color: #475569 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    min-height: auto !important;
+    white-space: nowrap !important;
+}
+
+.nav-inline-wrapper div.stButton > button:hover {
+    background: transparent !important;
+    color: #0284c7 !important;
+    transform: none !important;
+    box-shadow: none !important;
+}

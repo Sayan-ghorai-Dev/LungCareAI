@@ -1,0 +1,11 @@
+﻿venv/
+venv_new/
+__pycache__/
+*.py[cod]
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+users.db
+*.db
+.DS_Store
